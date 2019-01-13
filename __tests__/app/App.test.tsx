@@ -1,6 +1,5 @@
 import React from 'react';
 import App from '../../src/js/app/App';
-import { View, Text } from 'react-native';
 import TestRenderer from 'react-test-renderer';
 
 describe('App component unit test', () => {
@@ -11,12 +10,11 @@ describe('App component unit test', () => {
         expect(root).not.toBeNull();
         expect(renderer.toJSON()).toMatchSnapshot();
 
-        const view = root.findByType(View);
-        expect(root.findAllByType(View).length).toEqual(1);
+        const div = root.findByType('div');
+        expect(root.findAllByType('div').length).toEqual(1);
 
-        const text = view.findByType(Text);
-        expect(root.findAllByType(Text).length).toEqual(1);
-        // TODO: Figure out source of this issue
-        // expect(text.children[0]).toEqual('Hello!');
+        const span = div.findByType('span');
+        expect(root.findAllByType('span').length).toEqual(1);
+        expect(span.children[0]).toEqual('Hello!');
     })
 });

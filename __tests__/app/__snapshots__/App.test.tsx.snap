@@ -3,7 +3,7 @@
 exports[`App component unit test render test 1`] = `
 <div>
   <span
-    className="RedText"
+    style="RedText"
   >
     Hello!
   </span>
