@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component unit test render test 1`] = `
+<div>
+  <span
+    className="RedText"
+  >
+    Hello!
+  </span>
+</div>
+`;
