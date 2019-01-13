@@ -1,7 +1,7 @@
 {
-  "name": "parcel-test",
+  "name": "tech-evaluator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Application for me to mess around with up-and-coming JS tools",
   "main": "index.js",
   "scripts": {
     "start": "tsc && parcel index.html --open -p 3000 ",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "browserslist": "> 0.25%, not dead",
   "dependencies": {
     "parcel-bundler": "^1.10.3",
@@ -20,7 +20,6 @@
     "typescript": "^3.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "@types/jest": "^23.3.10",
