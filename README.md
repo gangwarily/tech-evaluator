@@ -6,10 +6,11 @@ This is a test application that I wrote for evaluating up-and-coming JavaScript 
 
 ## Currently Using Technologies
 
-* React
-* CSS Modules
-* TypeScript
-* Parcel
 * Babel 7
-
-## TODOs
+* CSS Modules
+* ESLint
+* Material UI
+* Parcel
+* Prettier
+* React
+* TypeScript

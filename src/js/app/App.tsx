@@ -1,11 +1,15 @@
 import React from 'react';
-import styles from './App.css';
+import Button from '@material-ui/core/Button';
+// import styles from './App.css';
+
+export type SomeType = {
+    foo: string;
+    bar: number;
+};
 
 const App = () => (
     <div>
-        <span className={styles.RedText}>
-            Hello!
-        </span>
+        <Button>Hello!</Button>
     </div>
 );
 
