@@ -5,7 +5,8 @@ module.exports = {
     "plugins": ["typescript", "prettier"],
     "env": {
         "browser": true,
-        "jest": true
+        "jest": true,
+        "jquery": true,
     },
     "rules": {
         // Allow JSX in JS, JSX, TS, TSX files
@@ -25,7 +26,10 @@ module.exports = {
             "tabWidth": 4,
             "singleQuote": true,
             "trailingComma": true
-        }]
+        }],
+
+        //Custom rules
+        "no-use-before-define": 0
     },
     // Custom resolver to prevent lint errors from being raised when importing
     // TypeScript files.

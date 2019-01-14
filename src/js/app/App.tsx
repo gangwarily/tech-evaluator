@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import Modal from '../modal/Modal';
 // import styles from './App.css';
 
 export type SomeType = {
@@ -9,7 +9,7 @@ export type SomeType = {
 
 const App = () => (
     <div>
-        <Button>Hello!</Button>
+        <Modal />
     </div>
 );
 
