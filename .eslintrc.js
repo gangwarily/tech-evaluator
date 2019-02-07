@@ -21,21 +21,16 @@ module.exports = {
         "no-unused-vars": "error",
         "typescript/no-unused-vars": "error",
 
+        "import/no-unresolved": "off",
+
         //Prettier config
         "prettier/prettier": ["error", {
             "tabWidth": 4,
             "singleQuote": true,
-            "trailingComma": true
+            "trailingComma": "es5"
         }],
 
         //Custom rules
         "no-use-before-define": 0
-    },
-    // Custom resolver to prevent lint errors from being raised when importing
-    // TypeScript files.
-    "settings": {
-        "import/resolver": {
-          "eslint-import-resolver-typescript": true
-        }
     }
 };

@@ -7,8 +7,7 @@ import TestRenderer, {
 import App from '../../src/js/app/App';
 
 describe('App component unit test', () => {
-    it('render test', () => {
-        const renderer: ReactTestRenderer = TestRenderer.create(<App />);
+    it('render test', () => {const renderer: ReactTestRenderer = TestRenderer.create(<App />);
 
         // You can use this syntax to allow both explicit typing and object destructure
         // in the same line. I think it's super ugly.
