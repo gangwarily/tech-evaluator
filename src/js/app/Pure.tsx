@@ -1,13 +1,18 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
 
 type Props = {
     text: string;
-    foo: Function;
+    foo: any;
 };
 
-const Pure = React.memo(({ text }: Props) => {
+const Pure = React.memo(({ text, foo }: Props) => {
     console.log('rendering pure component');
-    return <div>{text}</div>;
+    return (
+        <Button variant="contained" type="button" color="primary" onClick={foo}>
+            {text}
+        </Button>
+    );
 });
 
 export default Pure;

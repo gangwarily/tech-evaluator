@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Modal from '../modal/Modal';
-import Counter from '../counter/Counter';
 import Regular from './Regular';
 import Pure from './Pure';
 // import styles from './App.css';
@@ -14,14 +12,21 @@ type State = {
     foo: string;
 };
 
-const func = () => {};
+type Props = {
+    aNumber: number;
+};
 
-const AppHook = () => {
+const AppHook = (props: Props) => {
     const [foo, setFoo] = useState('bar');
 
     useEffect(() => {
-        setInterval(() => setFoo('bar'), 2000);
+        setInterval(() => setFoo('bar'), 5000);
     }, []);
+
+    const func = e => {
+        console.log(e.target);
+        console.log(`Hello! I am callback and my value is ${props.aNumber}`);
+    };
 
     return (
         <div>
@@ -31,7 +36,7 @@ const AppHook = () => {
     );
 };
 
-class AppClass extends React.Component<{}, State> {
+class AppClass extends React.Component<Props, State> {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,17 +49,16 @@ class AppClass extends React.Component<{}, State> {
             this.setState({
                 foo: 'bar',
             });
-        }, 2000);
+        }, 5000);
     }
 
-    fizzbuzz = () => console.log('fizzbuzz!');
+    func = () => console.log('fizzbuzz!');
 
     render() {
-        const blah = () => {};
         return (
             <div>
-                <Regular text="This is a regular component" foo={blah} />
-                <Pure text="This is a pure component" foo={blah} />
+                <Regular text="This is a regular component" foo={this.func} />
+                <Pure text="This is a pure component" foo={this.func} />
             </div>
         );
     }

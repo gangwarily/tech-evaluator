@@ -8,7 +8,4 @@ const type: SomeType = {
     bar: 425,
 };
 
-console.log(type.toString());
-console.log(hello());
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App aNumber={55} />, document.getElementById('app'));

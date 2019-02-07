@@ -1,13 +1,18 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
 
 type Props = {
     text: string;
-    foo: Function;
+    foo: any;
 };
 
-const Regular = ({ text }: Props) => {
+const Regular = ({ text, foo }: Props) => {
     console.log('rendering regular component');
-    return <div>{text}</div>;
+    return (
+        <Button variant="contained" type="button" color="secondary" onClick={foo}>
+            {text}
+        </Button>
+    );
 };
 
 export default Regular;
