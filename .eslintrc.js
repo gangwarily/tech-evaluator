@@ -24,7 +24,7 @@ module.exports = {
         "import/no-unresolved": "off",
 
         //Prettier config
-        "prettier/prettier": ["error", {
+        "prettier/prettier": ["warn", {
             "tabWidth": 4,
             "singleQuote": true,
             "trailingComma": "es5"

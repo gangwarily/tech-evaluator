@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Regular from './Regular';
 import Pure from './Pure';
 // import styles from './App.css';
+import Modal from '../modal/Modal';
+import BootstrapModal from '../modal/BootstrapModal';
 
 export type SomeType = {
     foo: string;
@@ -32,36 +34,12 @@ const AppHook = (props: Props) => {
         <div>
             <Regular text="This is a regular component" foo={func} />
             <Pure text="This is a pure component" foo={func} />
+            <div className="m-5">
+                <Modal />
+                <BootstrapModal />
+            </div>
         </div>
     );
 };
-
-class AppClass extends React.Component<Props, State> {
-    constructor(props) {
-        super(props);
-        this.state = {
-            foo: 'bar',
-        };
-    }
-
-    componentDidMount() {
-        setInterval(() => {
-            this.setState({
-                foo: 'bar',
-            });
-        }, 5000);
-    }
-
-    func = () => console.log('fizzbuzz!');
-
-    render() {
-        return (
-            <div>
-                <Regular text="This is a regular component" foo={this.func} />
-                <Pure text="This is a pure component" foo={this.func} />
-            </div>
-        );
-    }
-}
 
 export default AppHook;
